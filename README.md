@@ -7,7 +7,7 @@ npm run start
 
 `
 
-check in queries 
+# check in queries for products
 
 {
   products {
@@ -19,6 +19,12 @@ check in queries
     }
   }
 }
+
+
+# screenshot 
+![](1.png)
+
+# check in queries for orders
 
 {
   orders{
