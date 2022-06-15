@@ -14,7 +14,7 @@ npm run start
     title
     price
     reviews {
-      rating,
+      rating
       comment
     }
   }
@@ -28,12 +28,12 @@ npm run start
 
 {
   orders{
-    date,
+    date
     subtotal
     items{
       product{
-        title,
-        id,
+        title
+        id
         price
       }
     }
@@ -42,4 +42,4 @@ npm run start
 
 
 # screenshot 
-![](Screenshot_1.png)
+![](2.png)
