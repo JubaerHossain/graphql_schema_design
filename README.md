@@ -9,7 +9,7 @@ npm run start
 
 check in queries 
 
-`{
+{
   products {
     title
     price
@@ -34,6 +34,6 @@ check in queries
   }
 }
 
-`
+
 # screenshot 
-![](screenshot.png)
+![](Screenshot_1.png)
