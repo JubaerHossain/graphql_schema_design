@@ -9,5 +9,9 @@ module.exports = {
       const products = productsModel.productFilter(args.min, args.max);
       return products;
     },
+    productById: (_, args) => {
+      const product = productsModel.productById(args.id);
+      return product;
+    }
   },
 };

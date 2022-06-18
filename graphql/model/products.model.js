@@ -32,7 +32,12 @@ function productFilter(min, max) {
   );
 }
 
+function productById(id) {
+  return products.find((product) => product.id === id);
+}
+
 module.exports = {
   getAllProducts,
   productFilter,
+  productById
 };
