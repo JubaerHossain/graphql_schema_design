@@ -5,13 +5,24 @@ module.exports = {
       const products = productsModel.getAllProducts();
       return products;
     },
-    productByPrice : (root, args) => {
+    productByPrice: (root, args) => {
       const products = productsModel.productFilter(args.min, args.max);
       return products;
     },
     productById: (_, args) => {
       const product = productsModel.productById(args.id);
       return product;
-    }
+    },
+  },
+  Mutation: {
+    addProduct: (_, args) => {
+      const product = productsModel.saveProduct(
+        args.id,
+        args.title,
+        args.description,
+        args.price
+      );
+      return product;
+    },
   },
 };

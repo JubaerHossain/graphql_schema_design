@@ -35,9 +35,24 @@ function productFilter(min, max) {
 function productById(id) {
   return products.find((product) => product.id === id);
 }
+function saveProduct(id, title, description, price) {
+  const product = {
+    id: id,
+    title: title,
+    description: description,
+    price: price,
+    reviews: [
+      { rating: 5, comment: "I love this book" },
+      { rating: 3, comment: "It was ok" },
+    ],
+  }
+  products.push(product);
+  return product;
+}
 
 module.exports = {
   getAllProducts,
   productFilter,
-  productById
+  productById,
+  saveProduct,
 };
