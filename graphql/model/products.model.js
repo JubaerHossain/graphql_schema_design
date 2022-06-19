@@ -41,12 +41,15 @@ function saveProduct(id, title, description, price) {
     title: title,
     description: description,
     price: price,
-    reviews: [
-      { rating: 5, comment: "I love this book" },
-      { rating: 3, comment: "It was ok" },
-    ],
+    reviews: [],
   }
   products.push(product);
+  return product;
+}
+
+function addNewReview(id, rating, comment) {
+  const product = productById(id);
+  product?.reviews.push({ rating: rating, comment: comment });
   return product;
 }
 
@@ -55,4 +58,5 @@ module.exports = {
   productFilter,
   productById,
   saveProduct,
+  addNewReview,
 };

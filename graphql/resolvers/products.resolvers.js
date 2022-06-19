@@ -24,5 +24,13 @@ module.exports = {
       );
       return product;
     },
+    addNewReview: (_, args) => {
+      const product = productsModel.addNewReview(
+        args.id,
+        args.rating,
+        args.comment
+      );
+      return product;
+    }
   },
 };
